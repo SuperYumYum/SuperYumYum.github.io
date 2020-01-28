@@ -173,13 +173,11 @@ $(function() {
 <div class="container">
 <div>
 <div class="gamespacer"></div>
-<button id='rand' class="btn btn-info" onclick='setColorButtonToWarningClassWithId(getIdFromElement(randomGetOneInElementList(getAllLightButton())))'>Random?!</button>
-
-<button id='test' class="btn btn-info" onclick='forListButtonSetToLightClass(getAllWarningButton())'>test?!</button>
+<button id='rand' class="btn btn-info" onclick='setColorButtonToWarningClassWithId(getIdFromElement(randomGetOneInElementList(getAllLightButton(forListButtonSetToLightClass(getAllWarningButton())))))'>Random?!</button>
 <div class="gamespacer"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+   <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%;background-color: grey !important;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 </div>
 <div class="gamespacer"></div>
 <div class="card-deck">
@@ -187,11 +185,6 @@ $(function() {
       <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_kestrel.png" alt="">
       <div class="card-body">
          <h5 class="card-title">Krestel</h5>
-         <p class="card-text">
-            This is a wider card with supporting text below
-            as a natural lead-in to additional content.
-            This content is a little bit longer.
-         </p>
          <p class="card-text">
             <small class="text-muted">
 				<button id="1a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
@@ -205,11 +198,13 @@ $(function() {
       <img class="card-img-top" src="../images/picture.png" alt="">
       <div class="card-body">
          <h5 class="card-title">N2</h5>
+        
          <p class="card-text">
-            This card has supporting text below as a natural lead-in to additional content.
-         </p>
-         <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">
+				<button id="2a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="2b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+				<button id="2c" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">C</button>
+			</small>
          </p>
       </div>
    </div>
@@ -217,13 +212,13 @@ $(function() {
       <img class="card-img-top" src="../images/picture.png" alt="">
       <div class="card-body">
          <h5 class="card-title">N3</h5>
+         
          <p class="card-text">
-            This is a wider card with supporting text
-            below as a natural lead-in to additional content.
-            This card has even longer content than the first to show that equal height action.
-         </p>
-         <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">
+				<button id="3a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="3b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+				<button id="3c" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">C</button>
+			</small>
          </p>
       </div>
    </div>
@@ -231,76 +226,102 @@ $(function() {
       <img class="card-img-top" src="../images/picture.png" alt="">
       <div class="card-body">
          <h5 class="card-title">N4</h5>
+         
          <p class="card-text">
-            This is a wider card with supporting text below
-            as a natural lead-in to additional content.
-            This content is a little bit longer.
+            <small class="text-muted">
+				<button id="4a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="4b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+				<button id="4c" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">C</button>
+			</small>
          </p>
+      </div>
+   </div>
+   <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
+      <img class="card-img-top" src="../images/picture.png" alt="">
+      <div class="card-body">
+         <h5 class="card-title">N5</h5>
+         
          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">
+				<button id="5a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="5b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+			</small>
          </p>
       </div>
    </div>
   </div>
   <div class="gamespacer"></div>
+<div class="gamespacer"></div>
 <div class="card-deck">
-   <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
-      <div class="card-body">
-         <h5 class="card-title">N5</h5>
-         <p class="card-text">
-            This card has supporting text below as a natural lead-in to additional content.
-         </p>
-         <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-         </p>
-      </div>
-   </div>
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
       <img class="card-img-top" src="../images/picture.png" alt="">
       <div class="card-body">
          <h5 class="card-title">N6</h5>
          <p class="card-text">
-            This is a wider card with supporting text
-            below as a natural lead-in to additional content.
-            This card has even longer content than the first to show that equal height action.
-         </p>
-         <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">
+				<button id="6a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="6b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+				<button id="6c" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">C</button>
+			</small>
          </p>
       </div>
    </div>
-   
-    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
+   <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
       <img class="card-img-top" src="../images/picture.png" alt="">
       <div class="card-body">
          <h5 class="card-title">N7</h5>
+        
          <p class="card-text">
-            This is a wider card with supporting text
-            below as a natural lead-in to additional content.
-            This card has even longer content than the first to show that equal height action.
-         </p>
-         <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">
+				<button id="7a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="7b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+				<button id="7c" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">C</button>
+			</small>
          </p>
       </div>
    </div>
-   
-    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
+   <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
       <img class="card-img-top" src="../images/picture.png" alt="">
       <div class="card-body">
          <h5 class="card-title">N8</h5>
+         
          <p class="card-text">
-            This is a wider card with supporting text
-            below as a natural lead-in to additional content.
-            This card has even longer content than the first to show that equal height action.
-         </p>
-         <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">
+				<button id="8a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="8b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+				<button id="8c" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">C</button>
+			</small>
          </p>
       </div>
    </div>
+      <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
+      <img class="card-img-top" src="../images/picture.png" alt="">
+      <div class="card-body">
+         <h5 class="card-title">N9</h5>
+         
+         <p class="card-text">
+            <small class="text-muted">
+				<button id="9a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="9b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+				<button id="9c" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">C</button>
+			</small>
+         </p>
+      </div>
    </div>
+   <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
+      <img class="card-img-top" src="../images/picture.png" alt="">
+      <div class="card-body">
+         <h5 class="card-title">N10</h5>
+         
+         <p class="card-text">
+            <small class="text-muted">
+				<button id="0a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
+				<button id="0b" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">B</button>
+			</small>
+         </p>
+      </div>
+   </div>
+  </div>
    <div class="gamespacer"></div>
     </center>
 
