@@ -60,16 +60,8 @@ $(function() {
 </head>
 
 
-<body>
-	<div id="preloaded-images">
-		<img src="https://subsetgames.com/img/rollover_buttons/forum2.png" width="1" height="1">
-		<img src="https://subsetgames.com/img/rollover_buttons/faq2.png" width="1" height="1">
-		<img src="https://subsetgames.com/img/rollover_buttons/mods2.png" width="1" height="1">
-		<img src="https://subsetgames.com/img/rollover_buttons/reddit2.png" width="1" height="1">
-		<img src="https://subsetgames.com/img/rollover_buttons/merch2.png" width="1" height="1">
-		<img src="https://subsetgames.com/img/rollover_buttons/buypc2.png" width="1" height="1">
-		<img src="https://subsetgames.com/img/rollover_buttons/buyipad2.png" width="1" height="1">
-	</div>
+<body style="padding-top: 0px;">
+
 	
 	<div>
 	<!-- Navigation -->
@@ -78,57 +70,9 @@ $(function() {
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<a class="navbar-brand" href="./ftl.html"><img src="https://subsetgames.com/img/logo_small.png" class="img-responsive"></a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+				
 			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="#"></a>
-					</li>
-					<li><a href="https://subsetgames.com/ftl.html">FTL</a></li>
-					<li><a href="https://subsetgames.com/itb.html">Into the Breach</a></li>
-					<li><a href="https://www.subsetgames.com/forum/">Forums</a></li>
-					<li><a href="https://subsetgames.com/faq.html">FAQ</a></li>
-					<li><a href="https://subsetgames.com/contact.html">Contact</a></li>
-					<li><a href="https://subsetgames.com/jobs.html">Jobs</a></li>
-					<li><a href="http://store.ftlgame.com/" target="_blank">Merch</a></li>
-					<li><a href="https://twitter.com/SubsetGames" target="_blank"><i class="fab fa-twitter"></i></a></li>
-
-					<!--Languate selector-->
-					<li>
-						<!-- Dropup button -->
-						<div class="btn-group dropdown lang-select">
-							<button type="button" class="btn btn-language-top dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-language" aria-hidden="true"></i>
-							</button>
-							<div class="dropdown-menu">
-								<ul>
-									<li><a class="dropdown-item" href="#">English</a></li>
-									<li><a class="dropdown-item" href="https://de.subsetgames.com/">Deutsch</a></li>
-									<li><a class="dropdown-item" href="https://es.subsetgames.com/">Español</a></li>
-									<li><a class="dropdown-item" href="https://fr.subsetgames.com/">Français</a></li>
-									<li><a class="dropdown-item" href="https://it.subsetgames.com/">Italiano</a></li>
-									<li><a class="dropdown-item" href="https://pl.subsetgames.com/">Polski</a></li>
-									<li><a class="dropdown-item" href="https://pt.subsetgames.com/">Português</a></li>
-									<li><a class="dropdown-item" href="https://ru.subsetgames.com/">русский</a></li>
-									<li><a class="dropdown-item" href="https://zh.subsetgames.com/">汉语</a></li>
-								</ul>
-							</div>
-						</div>
-						<!--End-->
-					</li>
-					<!--End of language selector-->
-
-					<li>&nbsp;</li>
-
-				</ul>
-			</div>
+			
 			<!-- /.navbar-collapse -->
 		</div>
 		<!-- /.container -->
@@ -170,19 +114,18 @@ $(function() {
     <!-- Nav buttons -->
     <center>
       
-<div class="container">
-<div>
-<div class="gamespacer"></div>
-<button id='rand' class="btn btn-info" onclick='setColorButtonToWarningClassWithId(getIdFromElement(randomGetOneInElementList(getAllLightButton(forListButtonSetToLightClass(getAllWarningButton())))))'>Random?!</button>
-<div class="gamespacer"></div>
+<div class="container" id="main">
+<div style="margin-top:1em;">
+<button id='rand' class="btn btn-info" onclick='setColorButtonToWarningClassWithId(getIdFromElement(randomGetOneInElementList(getAllLightButton(forListButtonSetToClass(getAllWarningButton(),"btn btn-light")))))'>Random?!</button>
 </div>
-<div class="progress">
-   <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%;background-color: grey !important;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+<div class="progress" style="margin-top:1em;">
+   <div id="progress-success" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%;background-color: grey !important;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">0%</div>
+   <div id="progress-tentative" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%;background-color: orange !important;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10">0%</div>
 </div>
-<div class="gamespacer"></div>
-<div class="card-deck">
+
+<div class="card-deck" style="margin-top:1em;">
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_kestrel.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_kestrel.png" alt="krestel ship">
       <div class="card-body">
          <h5 class="card-title">Krestel</h5>
          <p class="card-text">
@@ -195,9 +138,9 @@ $(function() {
       </div>
    </div>
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_engi.png" alt="engi ship">
       <div class="card-body">
-         <h5 class="card-title">N2</h5>
+         <h5 class="card-title">Engi</h5>
         
          <p class="card-text">
             <small class="text-muted">
@@ -209,9 +152,9 @@ $(function() {
       </div>
    </div>
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_fed.png" alt="federation ship">
       <div class="card-body">
-         <h5 class="card-title">N3</h5>
+         <h5 class="card-title">Federation</h5>
          
          <p class="card-text">
             <small class="text-muted">
@@ -223,9 +166,9 @@ $(function() {
       </div>
    </div>
       <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_zoltan.png" alt="zoltant ship">
       <div class="card-body">
-         <h5 class="card-title">N4</h5>
+         <h5 class="card-title">Zoltan</h5>
          
          <p class="card-text">
             <small class="text-muted">
@@ -237,9 +180,9 @@ $(function() {
       </div>
    </div>
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_lanius.png" alt="lanius ship">
       <div class="card-body">
-         <h5 class="card-title">N5</h5>
+         <h5 class="card-title">Lanius</h5>
          
          <p class="card-text">
             <small class="text-muted">
@@ -250,13 +193,11 @@ $(function() {
       </div>
    </div>
   </div>
-  <div class="gamespacer"></div>
-<div class="gamespacer"></div>
-<div class="card-deck">
+<div class="card-deck" style="margin-top:1em;">
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_stealth.png" alt="stealth ship">
       <div class="card-body">
-         <h5 class="card-title">N6</h5>
+         <h5 class="card-title">Stealth</h5>
          <p class="card-text">
             <small class="text-muted">
 				<button id="6a" type="button" class="btn btn-light" onclick="toggleColorButton(this.id)">A</button>
@@ -267,9 +208,9 @@ $(function() {
       </div>
    </div>
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_rock.png" alt="rock ship">
       <div class="card-body">
-         <h5 class="card-title">N7</h5>
+         <h5 class="card-title">Rock</h5>
         
          <p class="card-text">
             <small class="text-muted">
@@ -281,9 +222,9 @@ $(function() {
       </div>
    </div>
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_slug.png" alt="slug ship">
       <div class="card-body">
-         <h5 class="card-title">N8</h5>
+         <h5 class="card-title">Slug</h5>
          
          <p class="card-text">
             <small class="text-muted">
@@ -295,9 +236,9 @@ $(function() {
       </div>
    </div>
       <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="https://subsetgames.com/img/site_ships2/ship_mantis.png" alt="mantis ship">
       <div class="card-body">
-         <h5 class="card-title">N9</h5>
+         <h5 class="card-title">Mantis</h5>
          
          <p class="card-text">
             <small class="text-muted">
@@ -309,9 +250,9 @@ $(function() {
       </div>
    </div>
    <div class="card" style="background-color: rgba(245, 245, 245, 0.2); ">
-      <img class="card-img-top" src="../images/picture.png" alt="">
+      <img class="card-img-top" src="" alt="Cristal ship">
       <div class="card-body">
-         <h5 class="card-title">N10</h5>
+         <h5 class="card-title">Cristal</h5>
          
          <p class="card-text">
             <small class="text-muted">
@@ -348,11 +289,10 @@ $(function() {
         <!--Nothing here, boss-->
       </div>
       <div class="col-md-4 col-sm-12 col-xs-12">
-      <div class="gamesmallspacer"></div>
-      <div class="row">
-	  <p>Buy the game : </p>
-	  </div>
-	  <div class="row">
+		<center>
+		<p>Buy the game :   </p>
+		</center>
+	  <div class="row justify-content-center" style="margin-top:1em;">
 	  
       <a href="http://store.steampowered.com/app/212680" target="_blank"><button type="button" class="btn btn-steam"><i class="fab fa-steam-square"></i>&nbsp;Steam</button></a>
         <a href="https://itunes.apple.com/us/app/ftl-faster-than-light/id833951143?mt=8" target="_blank"><button type="button" class="btn btn-ios"><i class="fab fa-apple"></i>&nbsp;iPad</button></a>
@@ -366,8 +306,7 @@ $(function() {
         </a>
         <!--End of HumbleWidgetBox section-->
         <a href="https://www.gog.com/game/faster_than_light" target="_blank"><button type="button" class="btn btn-gog"><i class="fa fa-gamepad"></i>&nbsp;GOG</button></a>
-        <br><br>
-        
+           
       </div>
     </div>
   </div>
@@ -405,19 +344,83 @@ function setColorButtonToWarningClassWithId(idButton){
 	document.getElementById(idButton).className = "btn btn-warning";
 	return;
 	}
+	
+function setColorButtonToClassWithId(idButton,classnameBtn){
+	document.getElementById(idButton).className = classnameBtn;
+	return;
+	}
+	
 function getAllWarningButton(){
 	var elements = document.querySelectorAll('.btn-warning');
 	return elements;
 	}
-function forListButtonSetToLightClass(listButton){
+function forListButtonSetToClass(listButton,classType){
 	if (listButton.length>0){
 	for (let i = 0; i < listButton.length; i++) {
-		document.getElementById(listButton[i].id).className = "btn btn-light";
+		document.getElementById(listButton[i].id).className = classType;
 			}
 		}
 	}
+function getAllBtnInCard(){
+	let elements = document.querySelectorAll('.card .btn');
+	return elements;
+	}
+function getProgress(){
+	let sumBtn = getAllBtnInCard().length;
+	let nbBtnSuccess = getAllSuccessButton().length;
+	let nbBtnWarning = getAllWarningButton().length;
 	
+	let progress = nbBtnSuccess/sumBtn;
+	return progress;
+	}
+function getTentative(){
+	let sumBtn = getAllBtnInCard().length;
+	let nbBtnWarning = getAllWarningButton().length;
+	let tentative = nbBtnWarning/sumBtn;
+	return tentative;
+	}
+function updateProgressBar(){
+	let progress = Math.floor(getProgress()*100);
+	let tentative = Math.floor(getTentative()*100);
+
+	divProgress = document.getElementById('progress-success');
+	divProgress.style.width=progress+"%";
+	divProgress.innerHTML=progress+"%";
 	
+	divTentative = document.getElementById('progress-tentative');
+	divTentative.style.width=tentative+"%";
+	divTentative.innerHTML=tentative+"%";
+	
+	return progress,tentative;
+	}
+	
+function setSavePoint(elements){
+	let itemToSave=[];
+
+	if (elements.length>0){ 
+		for (let i = 0; i < elements.length; i++) {
+		let subItemToSave=[];
+		subItemToSave.push(elements[i].id);
+		subItemToSave.push(elements[i].className);
+		itemToSave.push(subItemToSave);
+		}	
+	}
+	localStorage.setItem("ftlSave",JSON.stringify(itemToSave));
+	getSavePoint("ftlSave");
+	}
+	
+function getSavePoint(nameSave){
+	let saveCurrent = localStorage.getItem(nameSave);
+	saveCurrent = JSON.parse(saveCurrent);
+	if(saveCurrent.length>0){
+		for (let i = 0; i < saveCurrent.length; i++) {
+			setColorButtonToClassWithId(saveCurrent[i][0],saveCurrent[i][1]);
+		}
+	}else{
+	
+	}
+	}
+
 	
 	</script>
 	<!-- jQuery -->
@@ -428,6 +431,14 @@ function forListButtonSetToLightClass(listButton){
 	<script src="https://subsetgames.com/js/include-html.js"></script>
 	<script>
     includeHTML();
+	getSavePoint('ftlSave');
+	updateProgressBar()
+	document.getElementById('main').addEventListener("click", 
+		function(){
+			setSavePoint(getAllBtnInCard());
+			updateProgressBar();
+			
+					});
 	</script>
 	<!-- Isla S. built me -->
 </body>
